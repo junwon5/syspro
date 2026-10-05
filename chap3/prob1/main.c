@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+#include "copy.h"
+
+char line[MAXLINE];
+char longest[MAXLINE];
+
+int main(void) {
+    int len;
+    int max = 0;
+
+    while (fgets(line, sizeof(line), stdin) != NULL) {
+        len = strlen(line);
+
+        if (len > max) {
+            max = len;
+            copy(line, longest);
+        }
+    }
+
+    if (max > 0)
+        printf("%s\n", longest);
+
+    return 0;
+}
