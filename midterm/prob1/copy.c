@@ -1,0 +1,6 @@
+#include <stdio.h>
+
+int main(){
+	printf("Hello World Goodbye\n");
+	return 0;
+}
